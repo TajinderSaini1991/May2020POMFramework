@@ -12,8 +12,6 @@ hs_err_pid*
 ##############################
 ## Maven
 ##############################
-allure-results/
-target/
 screenshots/
 pom.xml.tag
 pom.xml.releaseBackup
