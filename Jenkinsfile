@@ -68,7 +68,7 @@ pipeline {
 
         stage('firefox') {
           steps {
-            sh 'run on firefox'
+            sh 'echo "run on firefox"'
           }
         }
 
