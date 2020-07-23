@@ -20,7 +20,7 @@ pipeline {
 
     stage('Run on QA') {
       steps {
-        bat 'bat "echo run"'
+        sh 'echo "run"'
       }
     }
 
