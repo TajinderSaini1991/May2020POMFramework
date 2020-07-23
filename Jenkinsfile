@@ -21,6 +21,7 @@ pipeline {
     stage('Run on QA') {
       steps {
         echo 'run on qa'
+        sh 'ls -ltr'
       }
     }
 
