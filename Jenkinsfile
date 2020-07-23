@@ -5,13 +5,13 @@ pipeline {
       parallel {
         stage('Run on Dev') {
           steps {
-            bat 'echo "run on dev env"'
+            shell('echo "run on dev env"')
           }
         }
 
         stage('chrome') {
           steps {
-            bat 'echo "run on chrome browser"'
+            shell('echo "run on chrome browser"')
           }
         }
 
@@ -19,4 +19,8 @@ pipeline {
     }
 
   }
+}
+
+def shell(command) {
+    return bat(returnStdout: true, script: "sh -x -c \"${command}\"").trim()
 }
