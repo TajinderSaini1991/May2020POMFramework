@@ -20,7 +20,7 @@ pipeline {
 
     stage('Run on QA') {
       steps {
-        shell 'echo "run"'
+        echo 'run on qa'
       }
     }
 
