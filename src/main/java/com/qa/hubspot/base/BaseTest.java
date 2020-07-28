@@ -10,12 +10,13 @@ import org.testng.annotations.Parameters;
 import com.qa.hubspot.pages.LoginPage;
 
 public class BaseTest {
+	
 public	Properties prop;
 public	BasePage basePage;
 public	WebDriver driver;
 public	LoginPage loginPage;
 	
-	@Parameters("browser")
+    @Parameters("browser")
 	@BeforeTest
 	public void setUp(String browserName){
 	basePage = new BasePage();

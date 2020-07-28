@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="22.625" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="367.917" tests="11" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
@@ -62,10 +62,52 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="verifySignUpLinkTest" classname="com.qa.hubspot.tests.LoginPageTest" time="2.4"/>
-  <testcase name="verifySignUpLinkTest" classname="com.qa.hubspot.tests.LoginPageTest" time="2.892"/>
-  <testcase name="verifyLoginPageTitleTest" classname="com.qa.hubspot.tests.LoginPageTest" time="0.127"/>
-  <testcase name="verifyLoginPageTitleTest" classname="com.qa.hubspot.tests.LoginPageTest" time="0.035"/>
-  <testcase name="loginTest" classname="com.qa.hubspot.tests.LoginPageTest" time="1.841"/>
-  <testcase name="loginTest" classname="com.qa.hubspot.tests.LoginPageTest" time="1.487"/>
+  <testcase name="verifySignUpLinkTest" classname="com.qa.hubspot.tests.LoginPageTest" time="8.864"/>
+  <testcase name="verifySignUpLinkTest" classname="com.qa.hubspot.tests.LoginPageTest" time="33.416">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.qa.hubspot.tests.LoginPageTest.verifySignUpLinkTest(LoginPageTest.java:28)
+</failure>
+  </testcase>
+  <testcase name="verifyLoginPageTitleTest" classname="com.qa.hubspot.tests.LoginPageTest" time="1.887"/>
+  <testcase name="verifyLoginPageTitleTest" classname="com.qa.hubspot.tests.LoginPageTest" time="4.229"/>
+  <testcase name="loginTest" classname="com.qa.hubspot.tests.LoginPageTest" time="33.391"/>
+  <testcase name="loginTest" classname="com.qa.hubspot.tests.LoginPageTest" time="49.727"/>
+  <testcase name="verifyHomePageHeaderTest" classname="com.qa.hubspot.tests.HomePageTest" time="108.543"/>
+  <testcase name="verifyHomePageHeaderTest" classname="com.qa.hubspot.tests.HomePageTest" time="19.81">
+    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.qa.hubspot.tests.HomePageTest.verifyHomePageHeaderTest(HomePageTest.java:43)
+</failure>
+    <system-out><![CDATA[I am in onFinish method HubSpot HomePage Testing-Chrome
+Test Suite is ending!
+login to the app with simr.saini7@gmail.com:!Saini006
+I am in onTestStart method verifyHomePageHeaderTest start
+verifyHomePageHeaderTest started!
+Element not found By.xpath: //h1[text()='Sales Dashboard']
+I am in onTestFailure method verifyHomePageHeaderTest failed
+Screenshot captured for test case:verifyHomePageHeaderTest
+verifyHomePageHeaderTest failed!
+]]></system-out>
+    <system-err><![CDATA[Jul 27, 2020 4:18:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="tearDown" classname="com.qa.hubspot.tests.HomePageTest" time="1.485">
+    <failure message="Session [8e9821964407796274e92638d1d31c4c] was terminated due to ORPHAN&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;LAPTOP-FHVIN2VS&apos;, ip: &apos;192.168.99.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.Ox9Zos}, goog:chromeOptions: {debuggerAddress: localhost:34573}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 8e9821964407796274e92638d1d...}&#10;Session ID: 8e9821964407796274e92638d1d31c4c" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+Session [8e9821964407796274e92638d1d31c4c] was terminated due to ORPHAN
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-FHVIN2VS', ip: '192.168.99.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /tmp/.com.google.Chrome.Ox9Zos}, goog:chromeOptions: {debuggerAddress: localhost:34573}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 8e9821964407796274e92638d1d...}
+Session ID: 8e9821964407796274e92638d1d31c4c
+</failure>
+    <system-out><![CDATA[I am in onTestStart method verifyHomePageTitleTest start
+verifyHomePageTitleTest started!
+I am in onTestFailure method verifyHomePageTitleTest failed
+Screenshot captured for test case:verifyHomePageTitleTest
+I am in onTestFailure method verifyHomePageTitleTest failed
+Screenshot captured for test case:verifyHomePageTitleTest
+]]></system-out>
+  </testcase>
+  <testcase name="verifyHomePageTitleTest" classname="com.qa.hubspot.tests.HomePageTest" time="1.689"/>
+  <testcase name="verifyLoggedInAccountNameTest" classname="com.qa.hubspot.tests.HomePageTest" time="2.21"/>
 </testsuite>
