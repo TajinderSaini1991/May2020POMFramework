@@ -10,13 +10,12 @@
 		<!--  <listener class-name="com.qa.hubspot.testlisteners.pdfListener" />  -->
 	</listeners>
 
-	 <test name="HubSpot LoginPage Testing-Chrome">
 	 <parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.qa.hubspot.tests.LoginPageTest" />
 			
 		</classes>
-	</test> 
+<!-- </test> 
 	
 	 <test name="HubSpot LoginPage Testing-Firefox">
 	 <parameter name="browser" value="firefox"></parameter>
@@ -24,7 +23,9 @@
 			<class name="com.qa.hubspot.tests.LoginPageTest" />
 			
 		</classes>
-	</test>  
+
+
+	</test> -->
 	
 	 <test name="HubSpot HomePage Testing-Chrome">
 	   <parameter name="browser" value="chrome"></parameter>

@@ -1,22 +1,60 @@
 pipeline {
   agent any
   stages {
-    stage('Run on Dev') {
+    stage('Build Dev') {
       parallel {
-        stage('Run on Dev') {
+        stage('Build Dev') {
           steps {
-            shell 'echo "run on dev env"'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
-        stage('chrome') {
+        stage('Run on Dev') {
           steps {
-            shell 'echo "run on chrome browser"'
+            sh 'mvn test -Denv=dev'
           }
         }
 
       }
     }
 
+    stage('Build QA') {
+      parallel {
+        stage('Build QA') {
+          steps {
+            sh 'mvn clean install -DskipTests=true'
+          }
+        }
+
+        stage('Run on QA') {
+          steps {
+            sh 'mvn test -Denv=qa'
+          }
+        }
+
+      }
+      
+    }
+
+    stage('Build Stage') {
+      parallel {
+        stage('Build Stage') {
+          steps {
+            sh 'mvn clean install -DskipTests= true'
+          }
+        }
+
+        stage('Run on stage') {
+          steps {
+            sh 'mvn test -Denv=stage'
+          }
+        }
+
+      }
+    }
+
+  }
+   tools {
+    maven 'M3'
   }
 }
