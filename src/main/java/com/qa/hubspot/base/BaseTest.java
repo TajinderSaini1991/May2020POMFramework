@@ -16,12 +16,14 @@ public	BasePage basePage;
 public	WebDriver driver;
 public	LoginPage loginPage;
 	
-    @Parameters("browser")
+   // @Parameters("browser")
 	@BeforeTest
-	public void setUp(String browserName){
+	//public void setUp(String browserName)
+	public void setUp()
+	{
 	basePage = new BasePage();
 	prop = basePage.init_prop();
-	prop.setProperty("browser", browserName);
+	//prop.setProperty("browser", browserName);
 	driver =basePage.init_driver(prop);
 	loginPage = new LoginPage(driver);
 		
