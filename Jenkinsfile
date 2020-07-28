@@ -52,15 +52,28 @@ pipeline {
       }
     }
 
-  
+  stage('Publish reports') {
+           steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: '/allure-results']]
+                    ])
+                }
+            }
+        }
+    
+    
+}
 
  
-  }
-
-
-
   
-  tools {
+
+
+   tools {
 
     maven 'M3'
   }
