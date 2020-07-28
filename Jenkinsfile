@@ -33,6 +33,7 @@ pipeline {
         }
 
       }
+      
     }
 
     stage('Build Stage') {
@@ -52,5 +53,8 @@ pipeline {
       }
     }
 
+  }
+   tools {
+    maven 'M3'
   }
 }
