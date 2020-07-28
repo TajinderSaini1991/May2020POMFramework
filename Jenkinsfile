@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run on Dev') {
           steps {
-            sh 'mvn test -Denv=dev'
+            sh 'mvn test -Denv="dev"'
           }
         }
 
@@ -33,14 +33,13 @@ pipeline {
         }
 
       }
-      
     }
 
     stage('Build Stage') {
       parallel {
         stage('Build Stage') {
           steps {
-            sh 'mvn clean install -DskipTests= true'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
@@ -55,26 +54,14 @@ pipeline {
 
   
 
- stage('Publish reports') {
-           steps {
-                script {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: '/allure-results']]
-                    ])
-                }
-            }
-        }
-    
-    
-
+ 
   }
 
 
-   tools {
+
+  
+  tools {
+
     maven 'M3'
   }
 }
