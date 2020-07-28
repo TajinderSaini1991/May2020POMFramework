@@ -39,7 +39,7 @@ pipeline {
       parallel {
         stage('Build Stage') {
           steps {
-            sh 'mvn clean install -DskipTests= true'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
