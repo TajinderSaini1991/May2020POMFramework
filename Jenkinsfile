@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run on Dev') {
           steps {
-            sh 'mvn test -Denv=dev'
+            sh 'mvn test -Denv="dev"'
           }
         }
 
@@ -33,7 +33,6 @@ pipeline {
         }
 
       }
-      
     }
 
     stage('Build Stage') {
@@ -54,7 +53,7 @@ pipeline {
     }
 
   }
-   tools {
+  tools {
     maven 'M3'
   }
 }
